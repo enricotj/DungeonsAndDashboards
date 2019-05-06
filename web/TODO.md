@@ -1,4 +1,5 @@
-Top-Level Components:
-- Landing/Authentication Page
-- Header
-- Left Hand Navigation Panel
+# TODO List
+
+## Components
+- Left Hand Navigation Menu
+- Notebook
