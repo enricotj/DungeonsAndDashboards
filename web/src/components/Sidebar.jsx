@@ -12,7 +12,6 @@ const mapStateToProps = (state) => {
 class Sidebar extends Component {
 	render() {
 		var dockWidth = this.props.docked ? 300 : 0;
-		
 		return (
 			<aside className='Sidebar' style={{width: dockWidth}}>
 				<a>Sidebar</a>

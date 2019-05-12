@@ -15,8 +15,6 @@ class Content extends Component {
 
 	handleClick = (e) => {
 		this.props.toggleSidebar();
-		console.log('Toggle button clicked!');
-
 	}
 
 	render() {
