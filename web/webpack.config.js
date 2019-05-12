@@ -1,23 +1,27 @@
 const webpack = require('webpack');
 
 module.exports = {
-	entry: "./src/index.js",
+	entry: "./src/index.jsx",
 	module: {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				use: ['babel-loader']
+				loader: 'babel-loader',
+			},
+			{
+				test: /.css$/,
+				use: ['style-loader', 'css-loader'],
 			}
-		]
+		],
 	},
 	resolve: {
-		extensions: ["*", ".js", ".jsx"]
+		extensions: ["*", ".js", ".jsx", ".css"]
 	},
 	output: {
 		path: __dirname + "/dist",
 		publicPath: "/",
-		filename: "bundle.js"
+		filename: "bundle.js",
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
@@ -25,6 +29,6 @@ module.exports = {
 	devServer: {
 		contentBase: "./dist",
 		open: true,
-		hot: true
+		hot: true,
 	}
 };
