@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'Dungeons and Dashboards';
+import App from './components/App';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <App/>,
   document.getElementById('app')
 );
 
